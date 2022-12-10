@@ -1,0 +1,86 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Caveat", sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background: #191A1F;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 10px;
+  height: 90vh;
+}
+
+.slide {
+  height: 40vh;
+  border-radius: 20px;
+  margin: -5px 0;
+  cursor: pointer;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.container__quote {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: 100% 90%;
+  background-repeat: no-repeat;
+}
+
+.slide h3 {
+  display: inline-block;
+  padding: 0 5vw 0 3vw;
+  position: absolute;
+  font-size: 2vw;
+  bottom: 0;
+  left: 1vw;
+  margin: 0;
+  opacity: 0;
+}
+.slide h3 span {
+  float: right;
+}
+
+.active {
+  overflow: hidden;
+  -webkit-transform: translate(30vw) scale(1.2);
+          transform: translate(30vw) scale(1.2);
+  height: 100vh;
+  z-index: 10;
+}
+.active .container__quote {
+  background-image: url(../image/fon.png);
+}
+.active h3 {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in 0.4s;
+  transition: opacity 0.3s ease-in 0.4s;
+}
